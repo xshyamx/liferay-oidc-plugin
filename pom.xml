@@ -32,6 +32,7 @@
         <!-- Version properties -->
         <liferay-dependency.version>6.2.5</liferay-dependency.version>
         <liferay-maven-plugin.version>6.2.10.15</liferay-maven-plugin.version>
+        <liferay-portal-kernel.version>3.39.2</liferay-portal-kernel.version>
         <java.version>1.7</java.version>
 
 		<maven.compiler.source>1.7</maven.compiler.source>
@@ -78,6 +79,14 @@
                 <groupId>org.apache.oltu.commons</groupId>
                 <artifactId>org.apache.oltu.commons.encodedtoken</artifactId>
                 <version>1.0.1</version>
+            </dependency>
+
+            <!-- liferay deps -->
+            <dependency>
+                <groupId>com.liferay.portal</groupId>
+                <artifactId>com.liferay.portal.kernel</artifactId>
+                <version>${liferay-portal-kernel.version}</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -138,6 +147,11 @@
         <name>Finalist public releases</name>
         <url>https://nexus.iprofs.nl/content/repositories/releases-public</url>
     </repository>
+        <repository>
+            <id>liferay-public</id>
+            <name>Liferay Public Releases</name>
+            <url>https://repository.liferay.com/nexus/content/repositories/liferay-public-releases/</url>
+        </repository>
     </repositories>
 
 	 <licenses>
